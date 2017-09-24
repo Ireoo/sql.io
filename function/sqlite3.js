@@ -1,4 +1,4 @@
-const request = require('request');
+const sqlite3 = require('sqlite3');
 
 const SQL = () => {
     return this;

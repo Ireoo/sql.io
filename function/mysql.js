@@ -1,4 +1,4 @@
-const request = require('request');
+const mysql = require('mysql');
 
 const SQL = () => {
     return this;

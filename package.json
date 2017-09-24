@@ -16,5 +16,11 @@
     "bugs": {
         "url": "https://github.com/Ireoo/sql.io/issues"
     },
-    "homepage": "https://github.com/Ireoo/sql.io#readme"
+    "homepage": "https://github.com/Ireoo/sql.io#readme",
+    "dependencies": {
+        "mongojs": "^2.4.1",
+        "mysql": "^2.14.1",
+        "request": "^2.82.0",
+        "sqlite3": "^3.1.12"
+    }
 }
