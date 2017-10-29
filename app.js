@@ -54,7 +54,7 @@ Sql.prototype.sql = (sql) => {
     return this;
 };
 
-Sql.prototype.run = (cb = () => { }) => {
+Sql.prototype.run = (cb = (from, message) => { }) => {
     for (let i in this.SQL) {
         let Q = this.SQL[i];
         Q.run(cb);
@@ -128,7 +128,7 @@ Sql.prototype.remove = () => {
     return this;
 }
 
-Sql.prototype.setiIndex = (data) => {
+Sql.prototype.setIndex = (data) => {
     for (let i in this.SQL) {
         let Q = this.SQL[i];
         Q.insert(data);
@@ -140,6 +140,14 @@ Sql.prototype.getIndex = () => {
     for (let i in this.SQL) {
         let Q = this.SQL[i];
         Q.getIndex();
+    }
+    return this;
+}
+
+Sql.prototype.removeIndex = (data) => {
+    for (let i in this.SQL) {
+        let Q = this.SQL[i];
+        Q.removeIndex(data);
     }
     return this;
 }
